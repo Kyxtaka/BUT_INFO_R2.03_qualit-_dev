@@ -70,9 +70,39 @@ class Main {
                                     5, citation_thesmophories,
                                     100, citation_guêpes,
                                     0, "");
+    //test citeation tragedie
     assert citation_antigone == sophocle.getCitationTragedie();
     assert citation_hécube == euripide.getCitationTragedie();
     assert citation_thesmophories == aristophane.getCitationTragedie();
-    System.out.println(aristophane.toString());
+
+    //test citeation comedie
+    assert "" == sophocle.getCitationComedie();
+    assert "" == euripide.getCitationComedie();
+    assert citation_guêpes == aristophane.getCitationComedie();
+
+    //test citeation drama
+    assert citation_limiers == sophocle.getCitationDrame();
+    assert citation_cyclope == euripide.getCitationDrame();
+    assert "" == aristophane.getCitationDrame();
+    
+    //test citeation tragedie+note
+    /**
+    
+    */
+    //test citeation tragedie+note
+    assert new StringBuilder().append(citation_antigone).append(",").append("95").toString().equals(sophocle.getPerfsTragedie());
+    assert new StringBuilder().append(citation_hécube).append(",").append("92").toString().equals(euripide.getPerfsTragedie());
+    assert new StringBuilder().append(citation_thesmophories).append(",").append("5").toString().equals(aristophane.getPerfsTragedie());
+    
+    //test citeation comedie
+    assert new StringBuilder().append("").append(",").append("0").toString().equals(sophocle.getPerfsComedie());
+    assert new StringBuilder().append("").append(",").append("0").toString().equals(euripide.getPerfsComedie());
+    assert new StringBuilder().append(citation_guêpes).append(",").append("100").toString().equals(aristophane.getPerfsComedie());
+
+    //test citeation drama
+    assert new StringBuilder().append(citation_limiers).append(",").append("60").toString().equals(sophocle.getPerfsDrame());
+    assert new StringBuilder().append(citation_cyclope).append(",").append("80").toString().equals(euripide.getPerfsDrame());
+    assert new StringBuilder().append("").append(",").append("0").toString().equals(aristophane.getPerfsDrame());
+    System.out.println("Arrivé ici tous les test sont passsés");
   }
 }

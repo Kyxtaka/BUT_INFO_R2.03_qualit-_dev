@@ -20,8 +20,29 @@ public class Auteur {
         return this.perfs.get("COMEDIE").getCitation();
     }
     public String getCitationDrame() {
-        return this.perfs.get("DRAME").getCitation();
+        return this.perfs.get("DRAMA").getCitation();
     }
+
+    public Integer getQualiteTragedie() {
+        return this.perfs.get("TRAGEDIE").getQualite();
+    }
+    public Integer getQualiteComedie() {
+        return this.perfs.get("COMEDIE").getQualite();
+    }
+    public Integer getQualiteDrame() {
+        return this.perfs.get("DRAMA").getQualite();
+    }
+
+    public String getPerfsTragedie() {
+        return this.getCitationTragedie()+","+this.getQualiteTragedie();
+    }
+    public String getPerfsComedie() {
+        return this.getCitationComedie()+","+this.getQualiteComedie();
+    }
+    public String getPerfsDrame() {
+        return this.getCitationDrame()+","+this.getQualiteDrame();
+    }
+    
     @Override
     public String toString() {
        return new StringBuilder().append("L'Honorable ").append(this.nom).toString();
