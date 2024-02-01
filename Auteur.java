@@ -10,4 +10,8 @@ public class Auteur {
         this.qualiteTragedie = "["+comedieNote+", "+comedie+"]";
         this.qualiteTragedie = "["+dramaNote+", "+drama+"]";
     }
+    @Override
+    public String toString() {
+       return new StringBuilder().append("L'Honorable").append(this.nom).toString();
+    }
 }
