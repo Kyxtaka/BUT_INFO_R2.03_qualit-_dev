@@ -1,6 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
-
+import java.util.*;
 public class Auteur {
     private String nom;
     private Map<String, Performance> perfs;
@@ -42,7 +40,14 @@ public class Auteur {
     public String getPerfsDrame() {
         return this.getCitationDrame()+","+this.getQualiteDrame();
     }
-    
+    /** 
+    public String pointFort() {
+        Integer tempNote = null;
+        Style tempStyle = null;
+        List<Performance> perfs = new ArrayList<Performance>(this.perfs.get());
+        for (Performance perf : List perfs)
+    }
+    */
     @Override
     public String toString() {
        return new StringBuilder().append("L'Honorable ").append(this.nom).toString();

@@ -86,9 +86,6 @@ class Main {
     assert "" == aristophane.getCitationDrame();
     
     //test citeation tragedie+note
-    /**
-    
-    */
     //test citeation tragedie+note
     assert new StringBuilder().append(citation_antigone).append(",").append("95").toString().equals(sophocle.getPerfsTragedie());
     assert new StringBuilder().append(citation_hécube).append(",").append("92").toString().equals(euripide.getPerfsTragedie());
@@ -103,6 +100,11 @@ class Main {
     assert new StringBuilder().append(citation_limiers).append(",").append("60").toString().equals(sophocle.getPerfsDrame());
     assert new StringBuilder().append(citation_cyclope).append(",").append("80").toString().equals(euripide.getPerfsDrame());
     assert new StringBuilder().append("").append(",").append("0").toString().equals(aristophane.getPerfsDrame());
+
+    //test Pointfort des auteur : 
+    assert "Tragédie" == sophocle.pointFort();
+    assert "Tragédie" == euripide.pointFort();
+    assert "Comédie" == aristophane.pointFort();
     System.out.println("Arrivé ici tous les test sont passsés");
   }
 }
