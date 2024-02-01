@@ -3,23 +3,24 @@ import java.util.Map;
 
 public class Auteur {
     private String nom;
-    private String citationTragedie;
-    private String citationComedie;
-    private String citationDrama;
-    private Map<String, Integer> perfs;
+    private Map<String, Performance> perfs;
 
     public Auteur(String nom, int tragedieNote, String tragedie, int comedieNote, String comedie, int dramaNote, String drama) {
         this.nom = nom;
-        this.citationTragedie = tragedie;
-        this.citationComedie = comedie;
-        this.citationDrama = drama;
         this.perfs = new HashMap<>();
-        this.perfs.put("TRAGEDIE", tragedieNote);
-        this.perfs.put("COMEDIE", comedieNote);
-        this.perfs.put("DRAMA", dramaNote);
+        this.perfs.put("TRAGEDIE", new Performance(tragedie, tragedieNote));
+        this.perfs.put("COMEDIE", new Performance(comedie, comedieNote));
+        this.perfs.put("DRAMA", new Performance(drama, dramaNote));
         }
+
     public String getCitationTragedie() {
-        return this.citationTragedie;
+        return this.perfs.get("TRAGEDIE").getCitation();
+    }
+    public String getCitationComedie() {
+        return this.perfs.get("COMEDIE").getCitation();
+    }
+    public String getCitationDrame() {
+        return this.perfs.get("DRAME").getCitation();
     }
     @Override
     public String toString() {
