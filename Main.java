@@ -70,5 +70,9 @@ class Main {
                                     5, citation_thesmophories,
                                     100, citation_guêpes,
                                     0, "");
+    assert citation_antigone == sophocle.getCitationTragedie();
+    assert citation_hécube == euripide.getCitationTragedie();
+    assert citation_thesmophories == aristophane.getCitationTragedie();
+    System.out.println(aristophane.toString());
   }
 }
