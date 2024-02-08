@@ -1,6 +1,9 @@
+//import javax.print.attribute.standard.JobOriginatingUserName;
+
 import src.*;
 class Main {
-  public static void main(String[] args) {
+  @SuppressWarnings("unlikely-arg-type")
+public static void main(String[] args) {
     String citation_antigone =
         "C'est ainsi que j'irai reposer près de lui, chère à qui m'est cher, saintement"
             + " criminelle.";
@@ -106,6 +109,26 @@ class Main {
     assert "Tragédie" == sophocle.pointFort();
     assert "Tragédie" == euripide.pointFort();
     assert "Comédie" == aristophane.pointFort();
+    
+
+    //test
+    // Epreuve (Style, Periode de la journée, nb Spec)
+    // Journee (Auteur1, List<Epreuve>)
+    // Periode Jour ==> Enum 
+    Epreuve e1 = new Epreuve(Style.DRAME, PeriodeJour.MATIN, 55);
+    Epreuve e2 = new Epreuve(Style.COMÉDIE, PeriodeJour.APRESMIDI, 25);
+    Epreuve e3 = new Epreuve(Style.TRAGÉDIE, PeriodeJour.SOIREE, 32);
+    Journee jEuripide = new Journee(euripide,e1,e2,e3);
     System.out.println("Arrivé ici tous les test sont passsés");
+    Journee jAristhophane = new Journee(aristophane,e1,e2,e3);
+    assert "Euripide" == jEuripide.getAuteur();
+    assert "Aristophane" == jAristhophane.getAuteur();
+    assert Style.TRAGÉDIE.equals(e1.getStyle());
+    assert PeriodeJour.MATIN.equals(e1.getPeriodeJour());
+    assert 55 ==  e1.getNbSpectateur();
+    assert euripide.getNom().equals(e1.winner(euripide, aristophane));
+    assert (e1.getNbSpectateur()*euripide.getQualiteDrame()) == (e1.getWinnerScore(euripide, aristophane));
+    assert jEuripide.volumeApplaudissement() == 0;
+    
   }
 }

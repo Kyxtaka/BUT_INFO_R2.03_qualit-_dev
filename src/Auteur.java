@@ -10,7 +10,11 @@ public class Auteur {
         this.perfs.put("TRAGEDIE", new Performance(tragedie, tragedieNote));
         this.perfs.put("COMEDIE", new Performance(comedie, comedieNote));
         this.perfs.put("DRAMA", new Performance(drama, dramaNote));
-        }
+    }
+    
+    public String getNom() {
+        return this.nom;
+    }
 
     public String getCitationTragedie() {
         return this.perfs.get("TRAGEDIE").getCitation();
