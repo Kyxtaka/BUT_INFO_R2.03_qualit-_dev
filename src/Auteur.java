@@ -46,6 +46,7 @@ public class Auteur {
         return this.getCitationDrame()+","+this.getQualiteDrame();
     }
     
+    @SuppressWarnings("unlikely-arg-type")
     public String pointFort() {
         List<Style> keys = new ArrayList<>();
         Integer note = null;

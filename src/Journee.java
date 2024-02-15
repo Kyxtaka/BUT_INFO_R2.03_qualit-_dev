@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Journee {
     private Auteur auteur;
+    @SuppressWarnings("unused")
     private List<Epreuve> epreuveList;
 
     public Journee(Auteur auteur, Epreuve e1, Epreuve e2, Epreuve e3) {
