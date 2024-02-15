@@ -1,5 +1,6 @@
 //import javax.print.attribute.standard.JobOriginatingUserName;
 
+import dionysies.Tournoi;
 import src.*;
 
 class Main {
@@ -132,5 +133,11 @@ public static void main(String[] args) {
     assert jEuripide.volumeApplaudissement() == 0;
     System.out.println("Arrivé ici tous les test sont passsés");
     
+    // 15 tournoi +ajout des 3 auteur
+    Tournoi<Auteur> tournoi = new Tournoi<>("Premier Tournoi");
+    tournoi.inscrire(aristophane);
+    tournoi.inscrire(sophocle);
+    tournoi.inscrire(euripide);
+
   }
 }
