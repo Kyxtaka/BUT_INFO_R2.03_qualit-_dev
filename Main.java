@@ -138,7 +138,20 @@ public static void main(String[] args) {
     tournoi.inscrire(aristophane);
     tournoi.inscrire(sophocle);
     tournoi.inscrire(euripide);
-    tournoi.afficheParticipants();
-
+    tournoi.débute();
+    //print des participant du tournoi
+    // question 16 to 19
+        //16
+        System.out.println(tournoi.estCommencé());
+    
+        //17
+        tournoi.enregistreRésultatJournée(true);
+   
+        //18
+        System.out.println("Les participants de la journée 1 du tournoi : "+tournoi.getNom());
+        System.out.println((tournoi.participantAProchaineJournée()));
+        System.out.println(tournoi. participantBProchaineJournée());
+        //19
+        tournoi.afficheParticipants();   
   }
 }
