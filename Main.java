@@ -138,6 +138,7 @@ public static void main(String[] args) {
     tournoi.inscrire(aristophane);
     tournoi.inscrire(sophocle);
     tournoi.inscrire(euripide);
+    tournoi.afficheParticipants();
 
   }
 }
