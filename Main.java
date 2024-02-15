@@ -119,7 +119,7 @@ public static void main(String[] args) {
     Epreuve e2 = new Epreuve(Style.COMÉDIE, PeriodeJour.APRESMIDI, 25);
     Epreuve e3 = new Epreuve(Style.TRAGÉDIE, PeriodeJour.SOIREE, 32);
     Journee jEuripide = new Journee(euripide,e1,e2,e3);
-    System.out.println("Arrivé ici tous les test sont passsés");
+    
     Journee jAristhophane = new Journee(aristophane,e1,e2,e3);
     assert "Euripide" == jEuripide.getAuteur();
     assert "Aristophane" == jAristhophane.getAuteur();
@@ -129,6 +129,7 @@ public static void main(String[] args) {
     assert euripide.getNom().equals(e1.winner(euripide, aristophane));
     assert (e1.getNbSpectateur()*euripide.getQualiteDrame()) == (e1.getWinnerScore(euripide, aristophane));
     assert jEuripide.volumeApplaudissement() == 0;
+    System.out.println("Arrivé ici tous les test sont passsés");
     
   }
 }
